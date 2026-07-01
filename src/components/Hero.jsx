@@ -80,7 +80,7 @@ export default function Hero({ onOpenSurprise }) {
       >
         <Sparkles className="w-4 h-4 text-gold-300 animate-pulse" />
         <span className="text-xs uppercase tracking-[0.25em] text-romantic-200 font-semibold">
-          For My Special Someone
+          For My Life Line
         </span>
       </motion.div>
 
