@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-cursive: 'Great Vibes', cursive;
+  
+  --color-romantic-50: #fff5f6;
+  --color-romantic-100: #ffeef0;
+  --color-romantic-200: #ffdce1;
+  --color-romantic-300: #ffbec7;
+  --color-romantic-400: #ff93a3;
+  --color-romantic-500: #ff6078;
+  --color-romantic-600: #f43f5e;
+  --color-romantic-700: #e11d48;
+  --color-romantic-800: #be123c;
+  --color-romantic-900: #9f1239;
+  
+  --color-gold-50: #fbf8eb;
+  --color-gold-100: #f5edcb;
+  --color-gold-200: #ebd897;
+  --color-gold-300: #dfbe5b;
+  --color-gold-400: #d4a32f;
+  --color-gold-500: #b8860b;
+  --color-gold-600: #956507;
+
+  --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
+  --animate-float-slow: float-slow 8s ease-in-out infinite;
+  --animate-float-medium: float-medium 6s ease-in-out infinite;
+  --animate-float-fast: float-fast 4s ease-in-out infinite;
+  --animate-sparkle: sparkle 2s ease-in-out infinite;
+  
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+  }
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(4deg); }
+  }
+  @keyframes float-medium {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-14px) rotate(-3deg); }
+  }
+  @keyframes float-fast {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+  }
+  @keyframes sparkle {
+    0%, 100% { opacity: 0.35; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+}
+
+/* Base resets & layout rules */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #0b0712; /* Rich dark starry space background */
+    color: #f3f4f6;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+    border-inline: none;
+    min-height: 100vh;
+    display: block;
+    box-sizing: border-box;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b0712;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #f43f5e;
+    border-radius: 3px;
+  }
+}
+
+/* Custom premium design system utility classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-panel-romantic {
+  background: rgba(244, 63, 94, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(244, 63, 94, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(244, 63, 94, 0.12);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(244, 63, 94, 0.6), 0 0 20px rgba(244, 63, 94, 0.3);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(212, 163, 47, 0.6), 0 0 20px rgba(212, 163, 47, 0.3);
+}
+
+.envelope-shadow {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* Hide standard styling of native HTML range sliders */
+input[type="range"] {
+  accent-color: #f43f5e;
+}
