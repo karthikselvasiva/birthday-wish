@@ -58,7 +58,7 @@ function App() {
         <div className="flex items-center gap-1.5 font-medium tracking-wide">
           <span>Made with</span>
           <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 animate-heartbeat" />
-          <span>only for Hemalatha Kartthik Selva Siva</span>
+          <span>only for Hemalatha Karthik Selva Siva</span>
         </div>
         <p className="opacity-60 text-[10px] uppercase tracking-wider font-semibold">
           © {new Date().getFullYear()} Our Little Universe. All Rights Reserved by Karthik Selva Siva.
